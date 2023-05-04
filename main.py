@@ -41,10 +41,10 @@ a=driver.title
 
 soup2 = BeautifulSoup(driver.page_source, "xml")
 title=soup2.find("h3").text
-time=soup2.find("html").text
+time=soup2.find("div").text
 
 import pandas as pd
 data=pd.DataFrame([{"Title":title,
                   "Time":time}])
                   
-data.to_json("news7.json")
+data.to_json("news8.json")
