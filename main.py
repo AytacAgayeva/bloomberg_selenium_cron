@@ -31,7 +31,6 @@ sitemap_urls = [loc.text for loc in soup.find_all("loc")]
 #driver = webdriver.Chrome()
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 driver.get(sitemap_urls[0])
-print(driver.title)
 soup1 = BeautifulSoup(driver.page_source, "xml")
 urls = [loc1.text for loc1 in soup1.find_all("loc")]
 
@@ -42,10 +41,10 @@ a=driver.title
 
 soup2 = BeautifulSoup(driver.page_source, "xml")
 title=soup2.find("h1").text
-#time=soup2.find("time").text
+time=soup2.find("html").text
 
 import pandas as pd
-data=pd.DataFrame([{"Title":urls[0],
-                  "Time":a}])
+data=pd.DataFrame([{"Title":title,
+                  "Time":time}])
                   
-data.to_json("news5.json")
+data.to_json("news6.json")
