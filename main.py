@@ -41,7 +41,7 @@ a=driver.title
 
 soup2 = BeautifulSoup(driver.page_source, "xml")
 title=soup2.find("h3").text
-time=soup2.find("div").text
+time=soup2.find("address").text
 
 import pandas as pd
 data=pd.DataFrame([{"Title":title,
