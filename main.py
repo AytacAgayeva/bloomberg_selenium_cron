@@ -39,7 +39,7 @@ driver
 time.sleep(5)
 a=driver.title
 
-soup2 = BeautifulSoup(driver.page_source, html.parser)
+soup2 = BeautifulSoup(driver.page_source, html)
 title=soup2.find("h3").text
 time=soup2.find("p").text
 
