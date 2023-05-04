@@ -44,6 +44,6 @@ urls = [loc1.text for loc1 in soup1.find_all("loc")]
 
 #import pandas as pd
 #data=pd.DataFrame([{"Title":title,
-                  "Time":"time"}])
+                  #"Time":"time"}])
                   
 #data.to_csv("news2.csv")
