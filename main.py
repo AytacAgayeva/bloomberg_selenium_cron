@@ -34,16 +34,17 @@ driver.get(sitemap_urls[0])
 print(driver.title)
 soup1 = BeautifulSoup(driver.page_source, "xml")
 urls = [loc1.text for loc1 in soup1.find_all("loc")]
-#driver.get(urls[0])
-#driver
-#time.sleep(5)
 
-#soup2 = BeautifulSoup(driver.page_source, "html")
+driver.get(urls[0])
+driver
+time.sleep(5)
+
+soup2 = BeautifulSoup(driver.page_source, "html")
 #title=soup2.find("h1").text
 #time=soup2.find("time").text
 
-#import pandas as pd
-#data=pd.DataFrame([{"Title":title,
+import pandas as pd
+data=pd.DataFrame([{"Title":soup2,
                   #"Time":"time"}])
                   
-#data.to_csv("news2.csv")
+data.to_csv("news3.csv")
