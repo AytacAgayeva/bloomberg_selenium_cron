@@ -29,7 +29,7 @@ soup = BeautifulSoup(response.content, "xml")
 
 sitemap_urls = [loc.text for loc in soup.find_all("loc")]
 
-driver = webdriver.Chrome()
+#driver = webdriver.Chrome()
 driver.get(sitemap_urls[0])
 soup1 = BeautifulSoup(driver.page_source, "xml")
 urls = [loc1.text for loc1 in soup1.find_all("loc")]
