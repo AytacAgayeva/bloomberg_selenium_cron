@@ -38,13 +38,14 @@ urls = [loc1.text for loc1 in soup1.find_all("loc")]
 driver.get(urls[0])
 driver
 time.sleep(5)
+a=driver.title
 
 soup2 = BeautifulSoup(driver.page_source, "html")
-#title=soup2.find("h1").text
+title=soup2.find("h1").text
 #time=soup2.find("time").text
 
 import pandas as pd
 data=pd.DataFrame([{"Title":soup2,
-                  "Time":"time"}])
+                  "Time":a}])
                   
 data.to_json("news3.json")
