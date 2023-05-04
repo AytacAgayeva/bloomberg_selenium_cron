@@ -39,10 +39,10 @@ time.sleep(5)
 
 soup2 = BeautifulSoup(driver.page_source, "html")
 title=soup2.find("h1").text
-time=soup2.find("time").text
+#time=soup2.find("time").text
 
 import pandas as pd
 data=pd.DataFrame([{"Title":title,
-                  "Time":time}])
+                  "Time":"time"}])
                   
 data.to_csv("news.csv")
