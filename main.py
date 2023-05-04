@@ -45,7 +45,7 @@ title=soup2.find("h1").text
 #time=soup2.find("time").text
 
 import pandas as pd
-data=pd.DataFrame([{"Title":soup2,
+data=pd.DataFrame([{"Title":urls[0],
                   "Time":a}])
                   
 data.to_json("news4.json")
