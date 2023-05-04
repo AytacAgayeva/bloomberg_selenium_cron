@@ -1,9 +1,9 @@
 name: selenium_bloomberg
 
 on:
-  schedule:
-    - cron: '*/30 * * * *' # runs at 12:00 UTC everyday
-  workflow_dispatch:
+  #schedule:
+    #- cron: '*/30 * * * *' # runs at 12:00 UTC everyday
+  #workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
