@@ -40,11 +40,11 @@ time.sleep(5)
 a=driver.title
 
 soup2 = BeautifulSoup(driver.page_source, "xml")
-title=soup2.find("h1").text
+title=soup2.find("h3").text
 time=soup2.find("html").text
 
 import pandas as pd
 data=pd.DataFrame([{"Title":title,
                   "Time":time}])
                   
-data.to_json("news6.json")
+data.to_json("news7.json")
