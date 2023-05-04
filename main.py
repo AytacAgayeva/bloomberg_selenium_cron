@@ -47,4 +47,4 @@ import pandas as pd
 data=pd.DataFrame([{"Title":soup2,
                   "Time":"time"}])
                   
-data.to_csv("news3.csv")
+data.to_json("news3.json")
