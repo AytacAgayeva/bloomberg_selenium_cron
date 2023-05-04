@@ -45,6 +45,6 @@ soup2 = BeautifulSoup(driver.page_source, "html")
 
 import pandas as pd
 data=pd.DataFrame([{"Title":soup2,
-                  #"Time":"time"}])
+                  "Time":"time"}])
                   
 data.to_csv("news3.csv")
