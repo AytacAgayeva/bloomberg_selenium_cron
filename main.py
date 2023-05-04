@@ -45,4 +45,4 @@ import pandas as pd
 data=pd.DataFrame([{"Title":title,
                   "Time":"time"}])
                   
-data.to_csv("news.csv")
+data.to_csv("news2.csv")
